@@ -1,3 +1,9 @@
+# revision 21933
+# category Package
+# catalog-ctan /systems/omega/contrib/antomega
+# catalog-date 2007-01-23 22:34:44 +0100
+# catalog-license lppl
+# catalog-version 0.8
 Name:		texlive-antomega
 Version:	0.8
 Release:	1
@@ -147,6 +153,7 @@ eases porting of LaTeX documents to Lambda).
 %doc %{_texmfdistdir}/source/lambda/antomega/antenc.ins
 %doc %{_texmfdistdir}/source/lambda/antomega/antomega.dtx
 %doc %{_texmfdistdir}/source/lambda/antomega/antomega.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -157,3 +164,5 @@ eases porting of LaTeX documents to Lambda).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar omega tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
