@@ -19,9 +19,6 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Requires:	texlive-omega
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 A language support package for Omega/Lambda. This replaces the
@@ -29,20 +26,12 @@ original omega package for use with Lambda, and provides extra
 facilities (including Babel-like language switching, which
 eases porting of LaTeX documents to Lambda).
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -154,7 +143,6 @@ eases porting of LaTeX documents to Lambda).
 %doc %{_texmfdistdir}/source/lambda/antomega/antenc.ins
 %doc %{_texmfdistdir}/source/lambda/antomega/antomega.dtx
 %doc %{_texmfdistdir}/source/lambda/antomega/antomega.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -165,5 +153,3 @@ eases porting of LaTeX documents to Lambda).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar omega tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
