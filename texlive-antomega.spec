@@ -153,3 +153,18 @@ eases porting of LaTeX documents to Lambda).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar omega tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.8-2
++ Revision: 749253
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.8-1
++ Revision: 717834
+- texlive-antomega
+- texlive-antomega
+- texlive-antomega
+- texlive-antomega
+- texlive-antomega
+
