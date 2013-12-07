@@ -6,7 +6,7 @@
 # catalog-version 0.8
 Name:		texlive-antomega
 Version:	0.8
-Release:	5
+Release:	6
 Summary:	Alternative language support for Omega/Lambda
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/omega/contrib/antomega
