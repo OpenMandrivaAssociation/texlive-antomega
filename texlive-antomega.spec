@@ -5,9 +5,9 @@ Summary:	Alternative language support for Omega/Lambda
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/omega/contrib/antomega
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antomega.r21933.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antomega.doc.r21933.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antomega.source.r21933.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antomega.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antomega.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antomega.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
