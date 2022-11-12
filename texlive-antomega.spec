@@ -1,19 +1,13 @@
-# revision 21933
-# category Package
-# catalog-ctan /systems/omega/contrib/antomega
-# catalog-date 2007-01-23 22:34:44 +0100
-# catalog-license lppl
-# catalog-version 0.8
 Name:		texlive-antomega
-Version:	0.8
-Release:	11
+Version:	21933
+Release:	1
 Summary:	Alternative language support for Omega/Lambda
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/omega/contrib/antomega
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antomega.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antomega.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antomega.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antomega.r21933.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antomega.doc.r21933.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antomega.source.r21933.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ facilities (including Babel-like language switching, which
 eases porting of LaTeX documents to Lambda).
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -146,25 +140,11 @@ eases porting of LaTeX documents to Lambda).
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar omega tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.8-2
-+ Revision: 749253
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.8-1
-+ Revision: 717834
-- texlive-antomega
-- texlive-antomega
-- texlive-antomega
-- texlive-antomega
-- texlive-antomega
-
