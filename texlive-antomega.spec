@@ -1,6 +1,6 @@
 Name:		texlive-antomega
 Version:	21933
-Release:	1
+Release:	2
 Summary:	Alternative language support for Omega/Lambda
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/systems/omega/contrib/antomega
