@@ -3,7 +3,7 @@ Version:	21933
 Release:	2
 Summary:	Alternative language support for Omega/Lambda
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/systems/omega/contrib/antomega
+URL:		https://www.ctan.org/tex-archive/systems/omega/contrib/antomega
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antomega.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/antomega.doc.r%{version}.tar.xz
